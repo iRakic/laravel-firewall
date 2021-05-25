@@ -8,6 +8,7 @@
     "homepage": "https://github.com/irakic/laravel-firewall",
     "license": "MIT",
     "type": "library",
+    "version": "0.0.1",
     "authors": [
         {
             "name": "Ivan Rakic",
