@@ -1,0 +1,54 @@
+{
+    "name": "irakic/laravel-firewall",
+    "description": "Laravel firewall. IP whitelist and blacklist. Country whitelist and blacklist. Hostname whitelist and blacklist.",
+    "keywords": [
+        "irakic",
+        "laravel-firewall"
+    ],
+    "homepage": "https://github.com/irakic/laravel-firewall",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Ivan Rakic",
+            "email": "irakic@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "IRakic\\LaravelFirewall\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "IRakic\\LaravelFirewall\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "IRakic\\LaravelFirewall\\LaravelFirewallServiceProvider"
+            ],
+            "aliases": {
+                "LaravelFirewall": "IRakic\\LaravelFirewall\\LaravelFirewallFacade"
+            }
+        }
+    }
+}
